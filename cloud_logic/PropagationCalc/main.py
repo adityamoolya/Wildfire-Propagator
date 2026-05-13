@@ -1,5 +1,5 @@
 def main():
-    print("Hello from cloud-logic!")
+    print("Hello from propagationcalc!")
 
 
 if __name__ == "__main__":
