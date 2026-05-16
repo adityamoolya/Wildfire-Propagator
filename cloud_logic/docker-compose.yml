@@ -1,0 +1,46 @@
+services:
+  random_forest:
+    build:
+      context: ./RandomForestModel
+    container_name: spreadcast-rf
+    ports:
+      - "8001:8001"
+    environment:
+      - PROPAGATION_CALC_URL=http://propagation_calc:8002
+    command: ["uvicorn", "handler:app", "--host", "0.0.0.0", "--port", "8001"]
+    depends_on:
+      - propagation_calc
+    networks:
+      - spreadcast
+
+  propagation_calc:
+    build:
+      context: ./PropagationCalc
+    container_name: spreadcast-prop
+    ports:
+      - "8002:8002"
+    environment:
+      - CALLING_AGENT_URL=http://calling_agent:8003
+      - NODE_REGISTRY_PATH=/data/node_registry.json
+    volumes:
+      - ./shared:/data:ro
+      - ./PropagationCalc/events.jsonl:/app/events.jsonl
+    depends_on:
+      - calling_agent
+    networks:
+      - spreadcast
+
+  calling_agent:
+    build:
+      context: ./calling_agent
+    container_name: spreadcast-agent
+    ports:
+      - "8003:8003"
+    env_file:
+      - ./calling_agent/.env
+    networks:
+      - spreadcast
+
+networks:
+  spreadcast:
+    driver: bridge

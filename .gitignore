@@ -28,4 +28,4 @@ dist-ssr
 __pycache__
 *.pyc
 .env
-cloud_logic/RandomForestModel/iam get-role --role-name ecsTaskExecutionRole
+*.jsonl

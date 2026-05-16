@@ -1,0 +1,52 @@
+{
+  "nodes": {
+    "1": {
+      "lat": 17.3850,
+      "lon": 78.4867,
+      "phone": "+919980658817",
+      "label": "Sector A - North Gate"
+    },
+    "2": {
+      "lat": 17.3858,
+      "lon": 78.4875,
+      "phone": "+919980658817",
+      "label": "Sector A - East Ridge"
+    },
+    "3": {
+      "lat": 17.3842,
+      "lon": 78.4855,
+      "phone": "+919980658817",
+      "label": "Sector A - West Trail"
+    },
+    "4": {
+      "lat": 17.3865,
+      "lon": 78.4885,
+      "phone": "+919980658817",
+      "label": "Sector B - Lookout Post"
+    },
+    "5": {
+      "lat": 17.3872,
+      "lon": 78.4898,
+      "phone": "+919980658817",
+      "label": "Sector B - Valley Floor"
+    },
+    "6": {
+      "lat": 17.3880,
+      "lon": 78.4910,
+      "phone": "+919980658817",
+      "label": "Sector C - Hilltop"
+    },
+    "7": {
+      "lat": 17.3835,
+      "lon": 78.4840,
+      "phone": "+919980658817",
+      "label": "Sector C - South Clearing"
+    },
+    "8": {
+      "lat": 17.3890,
+      "lon": 78.4925,
+      "phone": "+919980658817",
+      "label": "Sector D - Reservoir"
+    }
+  }
+}
